@@ -10,6 +10,18 @@
 
       cache.scores = [];
       cache.scores.push("1234");
+
+      var scoresBox = document.getElementById("scores");
+      function updateScores(){
+        var inner;
+        inner += "<ul>"
+        for(i = 0; i < cache.scores.length; i++) {
+            inner += "<li>"+cache.scores[i]+"</li>";
+        }
+        inner+="</ul>";
+        suggestions.innerHTML = inner;
+      }
+      updateScores();
     </script>
     <script src="game.js"></script>
     <style>
@@ -35,7 +47,7 @@
         <div id="space" class='button'>FIRE</div>
       </div>
     </div>
-
+    <div id="scores"></div>
     <div ng-app="myApp" ng-controller="myCtrl">
     Name: <input ng-model="username">
     <h1>You entered: {{username}}</h1>
