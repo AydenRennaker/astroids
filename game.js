@@ -3,9 +3,9 @@
 // Copyright (c) 2010 Doug McInnes
 //
 
-var data = {};
+var cache = {};
 
-data.scores = [];
+cache.scores = [];
 
 
 KEY_CODES = {
@@ -1004,11 +1004,12 @@ Game = {
     end_game: function () {
       Text.renderText('GAME OVER', 50, Game.canvasWidth/2 - 160, Game.canvasHeight/2 + 10);
 
-      if (!data.username) {
-        data.username = prompt("Please enter your name", "name");
+      if (!cache.username) {
+        cache.username = prompt("Please enter your name", "name");
       }
-      data.scores.push(Game.score);
-      console.log(JSON.stringify(data.scores));
+      cache.scores.push(Game.score);
+      console.log(Game.score)
+      console.log(JSON.stringify(cache.scores));
 
       if (this.timer == null) {
         this.timer = Date.now();
