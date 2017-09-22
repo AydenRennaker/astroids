@@ -5,17 +5,10 @@
     <script src="vector_battle_regular.typeface.js"></script>
     <script src="ipad.js"></script>
     <script>
-      var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope) {
-          $scope.name = prompt("Please enter your name", "name");
-      });
-    </script>
-    <script src="game.js">
-      var username = "test";
-      global.cache = {};
-
+      var cache;
       cache.scores = [];
     </script>
+    <script src="game.js"></script>
     <style>
       #canvas { border:1px solid black; top:0px; left:0px; }
       .button { position:absolute; border:1px solid black; }
@@ -51,6 +44,6 @@
         $scope.name = "John Doe";
     });
     </script>
-    
+
   </body>
 </html>
