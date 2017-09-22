@@ -1,5 +1,5 @@
 // Canvas Asteroids
-// with JJ
+// with sharknadojj
 // Copyright (c) 2010 Doug McInnes
 //
 
