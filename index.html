@@ -5,27 +5,9 @@
     <script src="vector_battle_regular.typeface.js"></script>
     <script src="ipad.js"></script>
     <script>
-    var app = angular.module('myApp', []);
-    app.controller('myCtrl', function($scope) {
-        $scope.name = "John Doe";
-    });
-    </script>
-    <script>
       var cache = {};
       cache.scores = [];
       cache.scores.push("1234");
-
-      function getScope(ctrlName) {
-          var sel = 'div[ng-controller="' + ctrlName + '"]';
-          return angular.element(sel).scope();
-      }
-
-      function changeText() {
-        var $scope = getScope('myCtrl');
-        $scope.scores = cache.scores;
-        $scope.$apply();
-      }
-      changeText();
     </script>
     <script src="game.js"></script>
     <style>
