@@ -999,9 +999,6 @@ Game = {
     end_game: function () {
       Text.renderText('GAME OVER', 50, Game.canvasWidth/2 - 160, Game.canvasHeight/2 + 10);
 
-      if (!cache.username) {
-        cache.username = prompt("Please enter your name", "name");
-      }
       cache.scores.push(Game.score);
       console.log("Score", Game.score)
       //console.log(JSON.stringify(cache.scores));

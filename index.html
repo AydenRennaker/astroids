@@ -8,6 +8,9 @@
       global.cache = {};
 
       cache.scores = [];
+      if (!cache.username) {
+        cache.username = prompt("Please enter your name", "name");
+      }
     </script>
     <style>
       #canvas { border:1px solid black; top:0px; left:0px; }
