@@ -1015,7 +1015,7 @@ Game = {
         this.timer = Date.now();
       }
       // wait 5 seconds then go back to waiting state
-      if (Date.now() - this.timer > 5000) {
+      if (Date.now() - this.timer > 0) {
         this.timer = null;
         this.state = 'waiting';
       }
