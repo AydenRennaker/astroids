@@ -12,7 +12,7 @@
       cache.scores.push("1234");
 
 
-      function updateScores(){
+      cache.updateScores = function updateScores(){
         var scoresBox = document.getElementById("scores");
         var inner;
         inner += "<ul>"
@@ -24,7 +24,7 @@
       }
 
       $( document ).ready(function() {
-          updateScores();
+          cache.updateScores();
       });
 
     </script>
