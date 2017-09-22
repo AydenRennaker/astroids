@@ -6,6 +6,8 @@
     <script src="ipad.js"></script>
     <script>
       var cache = {};
+      var username = promt("What is your name", "name");
+
       cache.scores = [];
       cache.scores.push("1234");
     </script>
@@ -35,19 +37,10 @@
     </div>
 
     <div ng-app="myApp" ng-controller="myCtrl">
-    Name: <input ng-model="name">
-    <h1>You entered: {{name}}</h1>
+    Name: <input ng-model="username">
+    <h1>You entered: {{username}}</h1>
     </div>
 
-    <div ng-app ng-controller="myCtrl">
-        <ul>
-        <li ng-repeat=" score in cache.scores" ng-bind-html-unsafe="cache.scores" >
-            {{ score }}
-        </li>
-        </ul>
-
-        <p>{{opt}}</p>
-    </div>
 
 <<<<<<< HEAD
     <script>
@@ -57,7 +50,5 @@
     });
     </script>
     <footer>Ayden Rennaker and John Joseph Stevens</footer>
-=======
->>>>>>> 3993f9e48a9be8afcc150c043c0b4b56c0ea18a0
   </body>
 </html>
