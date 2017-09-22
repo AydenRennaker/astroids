@@ -5,11 +5,12 @@
     <script src="vector_battle_regular.typeface.js"></script>
     <script src="ipad.js"></script>
     <script src="game.js">
+      var username;
       global.cache = {};
 
       cache.scores = [];
-      if (!cache.username) {
-        cache.username = prompt("Please enter your name", "name");
+      if (!username) {
+        username = prompt("Please enter your name", "name");
       }
     </script>
     <style>
