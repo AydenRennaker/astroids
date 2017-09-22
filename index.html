@@ -4,17 +4,11 @@
     <script src="jquery-1.4.1.min.js"></script>
     <script src="vector_battle_regular.typeface.js"></script>
     <script src="ipad.js"></script>
-    <script src="game.js">
-      var username = "test";
-      global.cache = {};
-
+    <script>
+      var cache;
       cache.scores = [];
-
-
-      $( document ).ready(function() {
-          username = prompt("Please enter your name", "name");
-      });
     </script>
+    <script src="game.js"></script>
     <style>
       #canvas { border:1px solid black; top:0px; left:0px; }
       .button { position:absolute; border:1px solid black; }
@@ -38,12 +32,18 @@
         <div id="space" class='button'>FIRE</div>
       </div>
     </div>
-    <div ng-app="">
-      <span ng-bind="username"></span>
-    </div>
-    <div>
 
-
+    <div ng-app="myApp" ng-controller="myCtrl">
+    Name: <input ng-model="name">
+    <h1>You entered: {{name}}</h1>
     </div>
+
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.name = "John Doe";
+    });
+    </script>
+
   </body>
 </html>
