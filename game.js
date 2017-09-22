@@ -1005,7 +1005,6 @@ Game = {
 
       cache.scores.push(Game.score);
       console.log("Score", Game.score);
-      changeText();
       //console.log(JSON.stringify(cache.scores));
 
       if (this.timer == null) {

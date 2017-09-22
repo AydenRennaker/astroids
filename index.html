@@ -5,6 +5,7 @@
     <script src="vector_battle_regular.typeface.js"></script>
     <script src="ipad.js"></script>
     <script>
+<<<<<<< HEAD
     var app = angular.module('myApp', []);
     app.controller('myCtrl', function($scope) {
         $scope.name = "John Doe";
@@ -14,21 +15,13 @@
     <h1>Asteroids</h1>
 
     <script>
+=======
+>>>>>>> 99742dc8c55f3a7c28690bf3e34b3117127c670c
       var cache = {};
+      var username = prompt("What is your name", "name");
+
       cache.scores = [];
       cache.scores.push("1234");
-
-      function getScope(ctrlName) {
-          var sel = 'div[ng-controller="' + ctrlName + '"]';
-          return angular.element(sel).scope();
-      }
-
-      function changeText() {
-        var $scope = getScope('myCtrl');
-        $scope.scores = cache.scores;
-        $scope.$apply();
-      }
-      changeText();
     </script>
     <script src="game.js"></script>
     <style>
@@ -56,19 +49,10 @@
     </div>
 
     <div ng-app="myApp" ng-controller="myCtrl">
-    Name: <input ng-model="name">
-    <h1>You entered: {{name}}</h1>
+    Name: <input ng-model="username">
+    <h1>You entered: {{username}}</h1>
     </div>
 
-    <div ng-app ng-controller="myCtrl">
-        <ul>
-        <li ng-repeat=" score in cache.scores" ng-bind-html-unsafe="cache.scores" >
-            {{ score }}
-        </li>
-        </ul>
-
-        <p>{{opt}}</p>
-    </div>
 
     <script>
     var app = angular.module('myApp', []);
