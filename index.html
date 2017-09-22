@@ -1,15 +1,26 @@
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="jquery-1.4.1.min.js"></script>
     <script src="vector_battle_regular.typeface.js"></script>
     <script src="ipad.js"></script>
-    <h1>Asteroids</h1>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.name = "John Doe";
+    });
+    </script>
     <script>
       var cache = {};
       cache.scores = [];
       cache.scores.push("1234");
+
+      function changeText() {
+        var $scope = getScope('myCtrl');
+        $scope.scores = cache.scores;
+        $scope.$apply();
+      }
+      changeText();
     </script>
     <script src="game.js"></script>
     <style>
@@ -51,6 +62,7 @@
         <p>{{opt}}</p>
     </div>
 
+<<<<<<< HEAD
     <script>
     var app = angular.module('myApp', []);
     app.controller('myCtrl', function($scope) {
@@ -58,5 +70,7 @@
     });
     </script>
     <footer>Ayden Rennaker and John Joseph Stevens</footer>
+=======
+>>>>>>> 3993f9e48a9be8afcc150c043c0b4b56c0ea18a0
   </body>
 </html>

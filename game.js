@@ -1004,7 +1004,8 @@ Game = {
       Text.renderText('GAME OVER', 50, Game.canvasWidth/2 - 160, Game.canvasHeight/2 + 10);
 
       cache.scores.push(Game.score);
-      console.log("Score", Game.score)
+      console.log("Score", Game.score);
+      changeText();
       //console.log(JSON.stringify(cache.scores));
 
       if (this.timer == null) {
