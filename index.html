@@ -20,8 +20,16 @@
         scoresBox.innerHTML = inner;
       }
 
+      cache.updateName = function(){
+        var nameBox = document.getElementById("name");
+        scoresBox.innerHTML = username;
+      }
+
+
+
       $( document ).ready(function() {
           cache.updateScores();
+          cache.updateName();
       });
 
     </script>
@@ -50,6 +58,7 @@
       </div>
     </div>
     <div>Play the game to record your scores below.</div>
+    <div id="name"></div>
     <div id="scores"></div>
 
     <footer>Ayden Rennaker and John Joseph Stevens</footer>
