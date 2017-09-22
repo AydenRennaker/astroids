@@ -15,6 +15,11 @@
       cache.scores = [];
       cache.scores.push("1234");
 
+      function getScope(ctrlName) {
+          var sel = 'div[ng-controller="' + ctrlName + '"]';
+          return angular.element(sel).scope();
+      }
+
       function changeText() {
         var $scope = getScope('myCtrl');
         $scope.scores = cache.scores;
