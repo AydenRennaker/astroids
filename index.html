@@ -39,12 +39,18 @@
         <div id="space" class='button'>FIRE</div>
       </div>
     </div>
-    <div ng-app="myApp">
-      {{username}}
-    </div>
-    <div>
 
-
+    <div ng-app="myApp" ng-controller="myCtrl">
+    Name: <input ng-model="name">
+    <h1>You entered: {{name}}</h1>
     </div>
+
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.name = "John Doe";
+    });
+    </script>
+    
   </body>
 </html>
