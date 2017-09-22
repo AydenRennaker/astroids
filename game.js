@@ -1008,7 +1008,7 @@ Game = {
         cache.username = prompt("Please enter your name", "name");
       }
       cache.scores.push(Game.score);
-      console.log(Game.score)
+      console.log("Score", Game.score)
       console.log(JSON.stringify(cache.scores));
 
       if (this.timer == null) {
