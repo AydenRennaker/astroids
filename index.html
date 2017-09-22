@@ -7,8 +7,9 @@
     <script src="ipad.js"></script>
     <h1>Asteroids</h1>
     <script>
-      var cache;
+      var cache = {};
       cache.scores = [];
+      cache.scores.push("1234");
     </script>
     <script src="game.js"></script>
     <style>
@@ -38,6 +39,16 @@
     <div ng-app="myApp" ng-controller="myCtrl">
     Name: <input ng-model="name">
     <h1>You entered: {{name}}</h1>
+    </div>
+
+    <div ng-app ng-controller="myCtrl">
+        <ul>
+        <li ng-repeat=" score in cache.scores" ng-bind-html-unsafe="cache.scores" >
+            {{ score }}
+        </li>
+        </ul>
+
+        <p>{{opt}}</p>
     </div>
 
     <script>
