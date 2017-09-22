@@ -368,7 +368,11 @@ Sprite = function () {
 Ship = function () {
   this.init("ship",
             [-5,   4,
+             -5,   -7,
+             -2,   2,
               0, -12,
+              2,   2,
+              5,   -7,
               5,   4]);
 
   this.children.exhaust = new Sprite();
@@ -624,7 +628,7 @@ AlienBullet = function () {
   this.draw = function () {
     if (this.visible) {
       this.context.save();
-      this.context.lineWidth = 2;
+      this.context.lineWidth = 3;
       this.context.beginPath();
       this.context.moveTo(this.x, this.y);
       this.context.lineTo(this.x-this.vel.x, this.y-this.vel.y);
@@ -935,7 +939,7 @@ Game = {
       }
 
       Game.score = 0;
-      Game.lives = 2;
+      Game.lives = 0;
       Game.totalAsteroids = 2;
       Game.spawnAsteroids();
 
