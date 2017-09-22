@@ -9,6 +9,23 @@
       var username = prompt("What is your name", "name");
       cache.scores = [];
       cache.scores.push("1234");
+
+
+      cache.updateScores = function updateScores(){
+        var scoresBox = document.getElementById("scores");
+        var inner;
+        inner += "<ul>"
+        for(i = 0; i < cache.scores.length; i++) {
+            inner += "<li>"+cache.scores[i]+"</li>";
+        }
+        inner+="</ul>";
+        scoresBox.innerHTML = inner;
+      }
+
+      $( document ).ready(function() {
+          cache.updateScores();
+      });
+
     </script>
     <script src="game.js"></script>
     <style>
@@ -34,18 +51,18 @@
         <div id="space" class='button'>FIRE</div>
       </div>
     </div>
-
-    <div ng-app="myApp" ng-controller="myCtrl">
-    Name: <input ng-model="username">
-    <h1>You entered: {{username}}</h1>
-    </div>
+    <div id="scores"></div>
 
 
+<<<<<<< HEAD
     <script>
     var app = angular.module('myApp', []);
     app.controller('myCtrl', function($scope) {
         $scope.name = "John Doe";
     });
     </script>
+=======
+    <footer>Ayden Rennaker and John Joseph Stevens</footer>
+>>>>>>> 1be3223b63f2089f82392414cf73d56c28814861
   </body>
 </html>
