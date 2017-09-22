@@ -11,8 +11,9 @@
       cache.scores = [];
       cache.scores.push("1234");
 
-      var scoresBox = document.getElementById("scores");
+
       function updateScores(){
+        var scoresBox = document.getElementById("scores");
         var inner;
         inner += "<ul>"
         for(i = 0; i < cache.scores.length; i++) {
@@ -21,7 +22,11 @@
         inner+="</ul>";
         scoresBox.innerHTML = inner;
       }
-      updateScores();
+
+      $( document ).ready(function() {
+          updateScores();
+      });
+
     </script>
     <script src="game.js"></script>
     <style>
