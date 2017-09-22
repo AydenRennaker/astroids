@@ -9,9 +9,11 @@
       global.cache = {};
 
       cache.scores = [];
-      if (!username) {
-        username = prompt("Please enter your name", "name");
-      }
+
+
+      $( document ).ready(function() {
+          username = prompt("Please enter your name", "name");
+      });
     </script>
     <style>
       #canvas { border:1px solid black; top:0px; left:0px; }
