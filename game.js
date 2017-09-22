@@ -1009,7 +1009,7 @@ Game = {
       }
       cache.scores.push(Game.score);
       console.log("Score", Game.score)
-      console.log(JSON.stringify(cache.scores));
+      //console.log(JSON.stringify(cache.scores));
 
       if (this.timer == null) {
         this.timer = Date.now();
