@@ -39,8 +39,14 @@
     <h1>You entered: {{name}}</h1>
     </div>
 
-    <div ng-repeat="n in [10, 5, 6, 8] track by $index">
-      {{n}}
+    <div ng-app ng-controller="myCtrl">
+        <ul>
+        <li ng-repeat=" score in scores" ng-bind-html-unsafe="cache.scores" >
+            {{ score }}
+        </li>
+        </ul>
+
+        <p>{{opt}}</p>
     </div>
 
     <script>
