@@ -1,6 +1,12 @@
 h1 {
   color: inherit;
-  align-content: center;
+  align: center;
   border-width: thin;
   border-color: inherit;
+}
+
+footer {
+  align-self: center;
+  border-width: thin;
+  color: inherit;
 }
