@@ -1,15 +1,26 @@
 <html>
   <head>
-    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="jquery-1.4.1.min.js"></script>
     <script src="vector_battle_regular.typeface.js"></script>
     <script src="ipad.js"></script>
-    <h1>Asteroids</h1>
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.name = "John Doe";
+    });
+    </script>
     <script>
       var cache = {};
       cache.scores = [];
       cache.scores.push("1234");
+
+      function changeText() {
+        var $scope = getScope('myCtrl');
+        $scope.scores = cache.scores;
+        $scope.$apply();
+      }
+      changeText();
     </script>
     <script src="game.js"></script>
     <style>
@@ -50,13 +61,6 @@
 
         <p>{{opt}}</p>
     </div>
-
-    <script>
-    var app = angular.module('myApp', []);
-    app.controller('myCtrl', function($scope) {
-        $scope.name = "John Doe";
-    });
-    </script>
 
   </body>
 </html>
