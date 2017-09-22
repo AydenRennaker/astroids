@@ -5,9 +5,15 @@
     <script src="vector_battle_regular.typeface.js"></script>
     <script src="ipad.js"></script>
     <script src="game.js">
+      var username = "test";
       global.cache = {};
 
       cache.scores = [];
+
+
+      $( document ).ready(function() {
+          username = prompt("Please enter your name", "name");
+      });
     </script>
     <style>
       #canvas { border:1px solid black; top:0px; left:0px; }
@@ -32,8 +38,11 @@
         <div id="space" class='button'>FIRE</div>
       </div>
     </div>
+    <div ng-app="">
+      <span ng-bind="username"></span>
+    </div>
     <div>
-      <span>{{cache.username}}'s Scores</span>
+
 
     </div>
   </body>
