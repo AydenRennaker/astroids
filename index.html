@@ -6,7 +6,7 @@
     <script src="ipad.js"></script>
     <script>
       var cache = {};
-      var username = prompt("What is your name", "name");
+      var username;
       cache.scores = [];
 
       cache.updateScores = function(){
@@ -22,7 +22,9 @@
 
       cache.updateName = function(){
         var nameBox = document.getElementById("name");
+        username = prompt("What is your name", "name");
         scoresBox.innerHTML = username;
+
       }
 
 
