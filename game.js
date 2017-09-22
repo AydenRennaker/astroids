@@ -935,7 +935,7 @@ Game = {
       }
 
       Game.score = 0;
-      Game.lives = 2;
+      Game.lives = 0;
       Game.totalAsteroids = 2;
       Game.spawnAsteroids();
 
